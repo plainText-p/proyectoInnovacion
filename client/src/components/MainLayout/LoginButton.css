@@ -1,0 +1,33 @@
+.container-button-login {
+  position: absolute;
+  right: 3.5rem;
+  margin-top: 1.4rem;
+}
+
+.container-button-login > a {
+  width: 10rem;
+  border: none;
+  background-color: #2b0c5a;
+}
+
+.container-button-login > a:hover {
+  background-color: #4d169f;
+}
+
+.container-button-login > .active {
+  background-color: #2b0c5a;
+}
+
+.btn:first-child:active,
+.btn:focus-visible,
+.btn.active:focus-visible {
+  background-color: #2b0c5a;
+  box-shadow: none;
+}
+
+@media (max-width: 1470px) {
+  .container-button-login {
+    margin-top: 0;
+    right: 6.5rem;
+  }
+}

@@ -1,0 +1,52 @@
+.form-control {
+  width: 25rem;
+}
+
+.form-control:focus {
+  border-color: #1a0041;
+  box-shadow: 0 0 0 0.25rem rgb(43, 12, 90, 0.25);
+  border: none;
+}
+
+.logo-image {
+  max-width: 100px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  align-items: center;
+  padding: 2rem 5rem 5rem 5rem;
+  margin-top: 3rem;
+}
+
+.card > button {
+  background-color: rgb(43, 12, 90);
+  border: none;
+}
+.card > button:hover,
+.card > button:focus {
+  background-color: rgb(74, 21, 154);
+}
+.card > button:active {
+  background-color: rgb(43, 12, 90) !important;
+}
+
+.container-buttons > button,
+.container-buttons > a {
+  margin: 0 5rem;
+}
+
+.button-form,
+.button-form:focus,
+.button-form:active {
+  background-color: rgb(43, 12, 90);
+  border: none;
+}
+
+.button-form:hover {
+  background-color: rgb(74, 21, 154);
+}
+
+:not(.btn-check) + .btn:active {
+  background-color: rgb(43, 12, 90);
+}

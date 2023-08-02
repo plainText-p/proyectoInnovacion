@@ -1,0 +1,7 @@
+.arrowRight {
+  transform: scaleX(1);
+}
+
+.arrowLeft {
+  transform: scaleX(-1);
+}
