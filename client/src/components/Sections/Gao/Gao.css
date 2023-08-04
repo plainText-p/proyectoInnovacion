@@ -22,9 +22,7 @@
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 40%;
   color: #2b0c5a;
-  border-bottom: 5px solid #2b0c5a;
 }
 
 .list-group {
@@ -93,7 +91,7 @@
 
 .list-group a:hover {
   background-color: #452477;
-  color: black;
+  color: #ffffff;
 }
 
 summary {

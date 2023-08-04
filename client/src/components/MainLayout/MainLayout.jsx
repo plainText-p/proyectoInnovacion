@@ -12,6 +12,8 @@ import NuestraHistoria from '../Sections/NuestraHistoria/NuestraHistoria.jsx';
 import Autoridades from '../Sections/Autoridades/Autoridades.jsx';
 import Inscripciones from '../Sections/Inscripciones/Inscripciones.jsx';
 import Gao from '../Sections/Gao/Gao';
+import Computacion from '../Sections/Computacion/Computacion.jsx';
+import CicloBasico from '../Sections/CicloBasico/CicloBasico.jsx';
 import PreguntasFrecuentes from '../Sections/PreguntasFrecuentes/PreguntasFrecuentes.jsx';
 import NotFound from '../Sections/NotFound/NotFound.jsx';
 
@@ -43,6 +45,8 @@ function MainLayout() {
         <Route exact path="/autoridades" element={<Autoridades />} />
         <Route exact path="/inscripciones" element={<Inscripciones />} />
         <Route exact path="/gao" element={<Gao />} />
+        <Route exact path="/computacion" element={<Computacion />} />
+        <Route exact path="/ciclo-basico" element={<CicloBasico />} />
         <Route
           exact
           path="/preguntas-frecuentes"
