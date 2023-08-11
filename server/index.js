@@ -7,20 +7,19 @@ app.use(cors({
   origin: 'http://localhost:5173'
 }))
 
-// configuracion de la conexion a la base de datos
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'usuario_posts',
   password: 'ETN7dolores',
   database: 'posts'
 })
+ 
 
-// conectar a la base de datos
 connection.connect((err) => {
   if(err) {
-    //console.error("Error al conectar con la base de datos", err)
+    console.error("Error al conectar con la base de datos", err)
   } else {
-    //console.log("Conexion exitosa a la base de datos")
+    console.log("Conexion exitosa a la base de datos")
   }
 })
 
@@ -40,13 +39,12 @@ app.get('/publicaciones', (req, res) => {
   });
 });
 
-// Ruta para manejar el insert en la base de datos
+
 app.post('/publicaciones', (req, res) => {
-  // Obtener los datos enviados en la solicitud POST desde el cliente
   const { title, content } = req.body;
 
 
-  // Realizar el insert en la base de datos
+
   const sql = 'INSERT INTO posts (title, content) VALUES (?, ?)';
   connection.query(sql, [title, content], (err, result) => {
     if (err) {
@@ -58,7 +56,30 @@ app.post('/publicaciones', (req, res) => {
   });
 });
 
+app.post('/login', (req, res) => {
+  const { Username, Password } = req.body; // Utiliza req.body en lugar de req.query
+
+  const sql = 'SELECT name, password FROM users WHERE name = ? AND password = ?';
+
+  console.log(Username, Password);
+  connection.query(sql, [Username, Password], (err, result) => {
+    if (err) {
+      console.error('Error al comparar usuarios:', err);
+      res.status(500).json({ error: 'Error al consultar en la base de datos' });
+    } else {
+      if (result.length > 0) {
+  
+        res.json({ message: 'Inicio de sesión exitoso' });
+      } else {
+  
+        res.status(401).json({ error: 'Usuario o contraseña incorrectos' });
+      }
+    }
+  });
+});
+ 
 const port = 3001
 app.listen(port, () => {
   console.log(`servidor corriendo en http://localhost:${port}`)
 })
+

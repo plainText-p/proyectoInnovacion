@@ -43,6 +43,13 @@
   border: none;
 }
 
+.button-form{
+  display: block;
+  margin: 0 auto;
+  width: 6rem;
+  margin-top: 3rem;
+}
+
 .button-form:hover {
   background-color: rgb(74, 21, 154);
 }

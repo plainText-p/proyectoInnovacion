@@ -23,7 +23,7 @@
 }
 
 .container-items {
-  padding-top: 4rem;
+  padding-top: 5.5rem;
 }
 
 .items {
@@ -93,6 +93,8 @@
   border-radius: 5%;
   background-color: var(--celeste-claro);
 }
+
+ 
 
 /* ------------------------------ */
 /* Estilos para el boton darkmode */

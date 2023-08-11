@@ -10,7 +10,7 @@ import {
 } from '../Icons/Icons.jsx';
 import './SidebarResponsive.css';
 
-function SidebarResponsive() {
+function SidebarResponsive({handleLogout}) {
   return (
     <div className="header">
       <button
@@ -32,6 +32,9 @@ function SidebarResponsive() {
         <Link to="login" className="btn btn-primary">
           Iniciar sesión
         </Link>
+        <button className="btn btn-primary" onClick={handleLogout}>
+        Cerrar sesión
+      </button>
       </div>
       <div
         className="offcanvas offcanvas-start"
@@ -59,7 +62,7 @@ function SidebarResponsive() {
                   <p className="texto-violeta">Inicio</p>
                 </li>
               </Link>
-              <Link to="publicaciones">
+              <Link to="publicacionesSL">
                 <li className="container-item-individual texto-semibold">
                   <PublicationIcon />
                   <p className="texto-violeta">Publicaciones</p>

@@ -1,16 +1,21 @@
 .container-button-login {
   position: absolute;
-  right: 3.5rem;
+  right: 1.5rem;
   margin-top: 1.4rem;
+  
 }
 
-.container-button-login > a {
-  width: 10rem;
+.container-button-login > a, 
+.container-button-login > button {
+  width: 6rem;
   border: none;
   background-color: #2b0c5a;
+  margin-right: 0.5rem;
+   
 }
 
-.container-button-login > a:hover {
+.container-button-login > a:hover, 
+.container-button-login > button:hover {
   background-color: #4d169f;
 }
 
@@ -28,6 +33,15 @@
 @media (max-width: 1470px) {
   .container-button-login {
     margin-top: 0;
-    right: 6.5rem;
+    right: 4rem;
   }
+
+  .container-button-login > a, 
+  .container-button-login > button {
+    width: 8rem;
+    border: none;
+    background-color: #2b0c5a;
+    margin-right: 0.5rem;
+   
+}
 }

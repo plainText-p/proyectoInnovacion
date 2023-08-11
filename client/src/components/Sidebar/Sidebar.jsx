@@ -23,7 +23,7 @@ const sections = [
   {
     icon: <PublicationIcon />,
     label: 'Publicaciones',
-    url: 'publicaciones',
+    url: 'publicacionesSL',
     hasSubsections: false,
     subsections: [],
   },
@@ -57,7 +57,7 @@ const sections = [
   },
 ];
 
-function Sidebar() {
+function Sidebar({handleLogout}) {
   return (
     <div className="sidebar-container">
       <SidebarTop />
@@ -65,6 +65,9 @@ function Sidebar() {
         <Link to="login" className="btn btn-primary">
           Iniciar sesión
         </Link>
+        <button className="btn btn-primary"  onClick={handleLogout}>
+        Cerrar sesión
+      </button>
       </div>
       <nav className="container-items">
         <ul className="items">

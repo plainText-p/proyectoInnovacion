@@ -4,7 +4,7 @@ import CardPublicacion from '../../CardPublicacion/CardPublicacion';
 import { AddPostIcon } from '../../Icons/Icons.jsx';
 import './Publicaciones.css';
 
-function Publicaciones() {
+function PublicacionesCL() {
   const [publicaciones, setPublicaciones] = useState([]);
 
   useEffect(() => {
@@ -83,7 +83,7 @@ function Publicaciones() {
         <h2 className="titulo-seccion">Publicaciones</h2>
       </div>
       <button className="container-add-delete" onClick={handleAddPostClick}>
-        <AddPostIcon />
+        
         <p className="texto-violeta texto-semibold">Nueva publicación</p>
       </button>
       <div className="contenedor-grid">
@@ -101,4 +101,4 @@ function Publicaciones() {
   );
 }
 
-export default Publicaciones;
+export default PublicacionesCL;
