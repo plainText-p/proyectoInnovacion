@@ -1,5 +1,1 @@
-
-Pasos para realizar un login
-
-[X] Botón de login
-[] Crear formulario para login
+Faltó implementar el diseño para celulares (resposive) de la página y sus secciones.

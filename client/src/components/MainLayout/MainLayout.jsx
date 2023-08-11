@@ -12,10 +12,11 @@ import PublicacionesCL from '../Sections/PublicacionesConLogin/PublicacionesCL.j
 import NuestraHistoria from '../Sections/NuestraHistoria/NuestraHistoria.jsx';
 import Autoridades from '../Sections/Autoridades/Autoridades.jsx';
 import Inscripciones from '../Sections/Inscripciones/Inscripciones.jsx';
-import Gao from '../Sections/Gao/Gao';
+import Gao from '../Sections/Gao/Gao.jsx';
 import PreguntasFrecuentes from '../Sections/PreguntasFrecuentes/PreguntasFrecuentes.jsx';
+import Computacion from '../Sections/Computacion/Computacion.jsx';
+import CicloBasico from '../Sections/CicloBasico/CicloBasico.jsx';
 import NotFound from '../Sections/NotFound/NotFound.jsx';
-
 import './LoginButton.css';
  
 
@@ -73,7 +74,9 @@ function MainLayout() {
         <Route exact path="/inscripciones" element={<Inscripciones />} />
         <Route exact path="/gao" element={<Gao />} />
         <Route exact path="/preguntas-frecuentes" element={<PreguntasFrecuentes/>}/>
-       
+       <Route exact path="/computacion" element={<Computacion />} />
+        <Route exact path="/ciclo-basico" element={<CicloBasico />} />
+        
         <Route exact path="*" element={<NotFound />} />
       </Routes>
 
