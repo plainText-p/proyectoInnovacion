@@ -1,3 +1,11 @@
+import {PORT} from './config.js'
+import {
+  DB_HOST,
+  DB_USER,
+  DB_NAME,
+  DB_PORT,
+  DB_PASSWORD
+} from './config.js'
 const express = require('express')
 const mysql = require('mysql2')
 const app = express()
@@ -8,10 +16,11 @@ app.use(cors({
 }))
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'usuario_posts',
-  password: 'ETN7dolores',
-  database: 'posts'
+  host: DB_HOST,
+  user: DB_USER,
+  password: DB_PASSWORD,
+  database: DB_NAME,
+  port: DB_PORT,
 })
  
 
@@ -78,8 +87,8 @@ app.post('/login', (req, res) => {
   });
 });
  
-const port = 3001
-app.listen(port, () => {
-  console.log(`servidor corriendo en http://localhost:${port}`)
+ 
+app.listen(PORT, () => {
+  console.log(`servidor corriendo en http://localhost:${PORT}`)
 })
 
