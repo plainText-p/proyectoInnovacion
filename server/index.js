@@ -1,11 +1,5 @@
 import {PORT} from './config.js'
-import {
-  DB_HOST,
-  DB_USER,
-  DB_NAME,
-  DB_PORT,
-  DB_PASSWORD
-} from './config.js'
+import {DB_HOST,DB_USER,DB_NAME,DB_PORT,DB_PASSWORD} from './config.js'
 const express = require('express')
 const mysql = require('mysql2')
 const app = express()
