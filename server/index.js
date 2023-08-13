@@ -1,9 +1,16 @@
-import {PORT} from './config.js'
-import {DB_HOST,DB_USER,DB_NAME,DB_PORT,DB_PASSWORD} from './config.js'
+ 
 const express = require('express')
 const mysql = require('mysql2')
 const app = express()
 const cors = require('cors')
+
+const config = require('./config.js');
+const PORT = config.PORT;
+const DB_HOST = config.DB_HOST;
+const DB_USER = config.DB_USER;
+const DB_NAME = config.DB_NAME;
+const DB_PORT = config.DB_PORT;
+const DB_PASSWORD = config.DB_PASSWORD;
 
 app.use(cors({
   origin: 'http://localhost:5173'
