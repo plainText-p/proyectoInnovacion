@@ -6,6 +6,9 @@
     "mysql2": "^2.3.0"
   },
   "scripts": {
-    "start": "node server/index.js && vite --base client"
+    "start": "concurrently \"node server/index.js\" \"vite --base client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
