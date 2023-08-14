@@ -6,9 +6,6 @@
     "mysql2": "^2.3.0"
   },
   "scripts": {
-    "start": "concurrently 'node server/index.js' 'cd client && npm run dev'"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0"
+    "start": "node paginaescuelareact/server/index.js && vite --base paginaescuelareact/client"
   }
 }
