@@ -6,6 +6,6 @@
     "mysql2": "^2.3.0"
   },
   "scripts": {
-    "start": "node paginaescuelareact/server/index.js && vite --base paginaescuelareact/client"
+    "start": "node server/index.js && vite --base client"
   }
 }
